@@ -69,11 +69,6 @@ async def banana(_, message):
     )
 
     
-@luna.on_message("Who created you?") 
-async def start(_, message):
-    await luna.send_chat_action(message.chat.id, "typing")
-    await sleep(2)
-    await message.reply_text("[Kriminal Dhanush](t.me/boss_of_the_telegram) created me")  
     
     
 
