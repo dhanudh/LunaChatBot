@@ -72,21 +72,21 @@ async def banana(_, message):
     
     
 
-@luna.on_message(filters.message("What is your name?")& ~filters.edited)
+@luna.on_message("What is your name?")(~filters.edited)
 async def name(_, message):
     await luna.send_chat_action(message.chat.id, "typing")
     await sleep(2)
     await message.reply_text("My name is amala😕")  
     
     
-@luna.on_message(filters.message("Hai")& ~filters.edited)
+@luna.on_message("Hai")(~filters.edited)
 async def hai(_, message):
     await luna.send_chat_action(message.chat.id, "typing")
     await sleep(2)
     await message.reply_text("Hello")  
     
 
-@luna.on_message(filters.message("enna pandra")& ~filters.edited) 
+@luna.on_message("enna pandra")(~filters.edited) 
 async def what(_, message):
     await luna.send_chat_action(message.chat.id, "typing")
     await sleep(2)
