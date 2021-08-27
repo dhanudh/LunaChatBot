@@ -73,21 +73,21 @@ async def banana(_, message):
     
 
 @luna.on_message("What is your name?") 
-async def start(_, message):
+async def name(_, message):
     await luna.send_chat_action(message.chat.id, "typing")
     await sleep(2)
     await message.reply_text("My name is amala😕")  
     
     
 @luna.on_message("Hai") 
-async def start(_, message):
+async def hai(_, message):
     await luna.send_chat_action(message.chat.id, "typing")
     await sleep(2)
     await message.reply_text("Hello")  
     
 
 @luna.on_message("enna pandra") 
-async def start(_, message):
+async def what(_, message):
     await luna.send_chat_action(message.chat.id, "typing")
     await sleep(2)
     await message.reply_text("Un kooda pesetu iruke🤣.")    
