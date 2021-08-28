@@ -69,28 +69,22 @@ async def banana(_, message):
     )
 
     
+@luna.on_message(filters.command("couples") & ~filters.edited)
+async def couples(_, message):
+    await message.reply_text(
+        "You+me=❤️",
+        disable_web_page_preview=True,
+    )    
     
     
-
-@luna.on_message("What is your name?")(~filters.edited)
-async def name(_, message):
-    await luna.send_chat_action(message.chat.id, "typing")
-    await sleep(2)
-    await message.reply_text("My name is amala😕")  
+  
+@luna.on_message(filters.command("support") & ~filters.edited)
+async def support(_, message):
+    await message.reply_text(
+        "[Touch me](t.me/amalasupport) ",
+        disable_web_page_preview=True,
+    )
     
-    
-@luna.on_message("Hai")(~filters.edited)
-async def hai(_, message):
-    await luna.send_chat_action(message.chat.id, "typing")
-    await sleep(2)
-    await message.reply_text("Hello")  
-    
-
-@luna.on_message("enna pandra")(~filters.edited) 
-async def what(_, message):
-    await luna.send_chat_action(message.chat.id, "typing")
-    await sleep(2)
-    await message.reply_text("Un kooda pesetu iruke🤣.")    
 
 
 
